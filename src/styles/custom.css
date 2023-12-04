@@ -1,0 +1,14 @@
+.btn-c1{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: var(--green1);
+    outline: none;
+    border: none;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--white);
+    padding: .5rem 2rem;
+}
