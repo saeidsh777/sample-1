@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { ChevronDown } from "react-bootstrap-icons";
 import { List } from "react-bootstrap-icons";
 import { X } from "react-bootstrap-icons";
+
 import "./Header.css";
-export default function Header() {
+
+export default function Header({ children }) {
   const [showMenu, setShowMenu] = useState(false);
   const jubElm = useRef(null);
   const pageElm = useRef(null);
@@ -18,14 +20,15 @@ export default function Header() {
 
     window.addEventListener("resize", checkScreen);
 
-    return ()=> window.removeEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
   const showSubMenu = (targetElm) => {
     targetElm.current.classList.toggle("show-sub-list");
   };
+
   return (
-    <div className="Header">
+    <header className="Header">
       <div className="header-container position-relative">
         <div className="d-md-flex container-lg justify-content-between align-items-center py-2">
           <div className="left-header-box d-flex align-items-center justify-content-between justify-content-md-start gap-4">
@@ -63,7 +66,7 @@ export default function Header() {
                   <span to="/jobs" className="navlink-item">
                     Job List
                     <ChevronDown size={15} className="ms-1" />
-                    <ul className="sub-list">
+                    <ul className="sub-list white-b">
                       <li className="sub-list-item">
                         <Link className="sub-navlist-item">FrontEnd</Link>
                       </li>
@@ -81,7 +84,7 @@ export default function Header() {
                     Pages
                     <ChevronDown size={15} className="ms-1" />
                     <i className="bi bi-chevron-down"></i>
-                    <ul className="sub-list">
+                    <ul className="sub-list white-b">
                       <li className="sub-list-item">
                         <Link className="sub-navlist-item">Services</Link>
                       </li>
@@ -169,6 +172,7 @@ export default function Header() {
           </nav>
         </div>
       </div>
-    </div>
+      <div className="header-banner">{children}</div>
+    </header>
   );
 }

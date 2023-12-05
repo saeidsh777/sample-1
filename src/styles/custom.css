@@ -10,5 +10,33 @@
     font-size: .8rem;
     font-weight: 600;
     color: var(--white);
-    padding: .5rem 2rem;
+    padding: .8rem 2rem;
+    width: fit-content;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+.btn-c1:hover{
+    background-color: var(--green2);
+    box-shadow: var(--shadow1);
+}
+
+.green-t{
+    color: var(--green1);
+}
+.green-b{
+    background-color: var(--green1);
+}
+
+.black-50-t{
+    color: var(--black-50);
+}
+
+.white-t{
+    color: var(--white);
+}
+.white-b{
+    background-color: var(--white);
 }
