@@ -40,3 +40,6 @@
 .white-b{
     background-color: var(--white);
 }
+.white-50-b{
+    background-color: var(--white-50);
+}

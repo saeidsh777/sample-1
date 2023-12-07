@@ -1,0 +1,31 @@
+.JobBox{
+    padding: 1rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 0 10px 30px rgba(233, 233, 233, 0.348) ;
+}
+
+.valid-company{
+    background-color: var(--green-50) ;
+    width: fit-content;
+    padding: .2rem 1rem;
+    border-radius: 2rem;
+    -webkit-border-radius:2rem;
+    -moz-border-radius:2rem;
+    -ms-border-radius:2rem;
+    -o-border-radius:2rem;
+}
+
+.valid-title{
+    font-size: .8rem;
+}
+
+.job-body p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
