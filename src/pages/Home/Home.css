@@ -154,5 +154,44 @@ font-weight: 700;
   object-fit: cover;
   width: 100%;
 }
-
 /* ===============  END Featured Compan =============== */
+
+
+
+/** ===============  START Community  =============== **/
+.community{
+  height: 90vh;
+  background-image: url('/public//images/positive-about.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.community-bg{
+  display: flex;
+  align-items: center;
+height: 100%;
+  background: linear-gradient(70deg, #183444 25%, #18344480 100%);;
+}
+
+.count-up{
+  position: absolute;
+  width: 100%;
+  bottom: -10%;
+}
+
+.count-box{
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0 0 10px 50px rgba(52, 52, 52, 0.06);
+}
+
+.count-number{
+  color: var(--green1);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* ===============  END Community =============== */

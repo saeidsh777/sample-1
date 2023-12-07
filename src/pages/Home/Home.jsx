@@ -4,6 +4,7 @@ import { Mortarboard } from "react-bootstrap-icons";
 import JobBox from "../../Components/JobBox/JobBox";
 import jobDatas from "../../data/jobData";
 import AOS from "aos";
+import CountUp from "react-countup";
 
 import "aos/dist/aos.css";
 import "./Home.css";
@@ -266,47 +267,47 @@ export default function Home() {
                 <div className="row">
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/velocity-1.png" alt="velocity" />
+                      <img src="/images/velocity-1.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-2.png" alt="velocity" />
+                      <img src="/images/vector-2.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-3.png" alt="velocity" />
+                      <img src="/images/vector-3.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-4.png" alt="velocity" />
+                      <img src="/images/vector-4.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-5.png" alt="velocity" />
+                      <img src="/images/vector-5.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-6.png" alt="velocity" />
+                      <img src="/images/vector-6.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-7.png" alt="velocity" />
+                      <img src="/images/vector-7.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-8.png" alt="velocity" />
+                      <img src="/images/vector-8.png" alt="velocity" />
                     </div>
                   </div>
                   <div className="col-6 col-md-4 gx-1">
                     <div className="white-b featured-company-img-box">
-                      <img src="/public/images/vector-9.png" alt="velocity" />
+                      <img src="/images/vector-9.png" alt="velocity" />
                     </div>
                   </div>
                 </div>
@@ -335,7 +336,97 @@ export default function Home() {
           </div>
         </section>
 
-        
+        <section className="community position-relative">
+          <div className="community-bg">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <div
+                    className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1"
+                    data-aos="fade-right"
+                    data-aos-offset="200"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="top-bottom"
+                  >
+                    <div className="d-flex flex-column gap-3 ps-5">
+                      <span className="fw-bold m-0 h1 white-t">
+                        Join our community of talented professionals by applying
+                        for a job today!
+                      </span>
+                      <p className="white-t">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                        dapibus leo.
+                      </p>
+                      <button className="btn-c1">DISCOVER MORE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="count-up"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-bottom"
+          >
+            <div className="container count-box white-b">
+              <div className="row">
+                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div className="count-number">
+                    <CountUp
+                      end={100}
+                      enableScrollSpy={true}
+                      scrollSpyDelay={200}
+                    />
+                    K+
+                  </div>
+                  <h6 className="fw-bold">Member Active</h6>
+                </div>
+                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div className="count-number">
+                    <CountUp
+                      end={14}
+                      enableScrollSpy={true}
+                      scrollSpyDelay={200}
+                    />
+                    K+
+                  </div>
+                  <h6 className="fw-bold">Companies</h6>
+                </div>
+                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div className="count-number">
+                    <CountUp
+                      end={270}
+                      enableScrollSpy={true}
+                      scrollSpyDelay={200}
+                    />
+                    +
+                  </div>
+                  <h6 className="fw-bold">Expert Trainers</h6>
+                </div>
+                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div className="count-number">
+                    <CountUp
+                      end={15}
+                      enableScrollSpy={true}
+                      scrollSpyDelay={200}
+                    />
+                    K+
+                  </div>
+                  <h6 className="fw-bold">Years of Experience</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
