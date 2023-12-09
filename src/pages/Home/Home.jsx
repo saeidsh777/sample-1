@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
-import { Mortarboard } from "react-bootstrap-icons";
-import JobBox from "../../Components/JobBox/JobBox";
-import jobDatas from "../../data/jobData";
+import LastJob from "../../Components/LastJob/LastJob";
 import AOS from "aos";
 import CountUp from "react-countup";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 
+import { Mortarboard } from "react-bootstrap-icons";
+import { PersonCircle } from "react-bootstrap-icons";
+import { Stars } from "react-bootstrap-icons";
+import { Headset } from "react-bootstrap-icons";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "aos/dist/aos.css";
 import "./Home.css";
 
 export default function Home() {
-  const [jobData, setJobData] = useState(jobDatas);
-
   AOS.init();
   AOS.init({
     // Global settings:
@@ -237,26 +243,7 @@ export default function Home() {
 
         <section className="latest-job">
           <div className="container">
-            <div className="row">
-              <span className="h1 text-center fw-bold d-block mb-4">
-                Latest Job Listing
-              </span>
-
-              {jobData.map((jobItem, index) => (
-                <div
-                  key={index}
-                  className="col-12 col-lg-4 mb-4"
-                  data-aos="zoom-in"
-                  data-aos-offset="200"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-in-out"
-                  data-aos-once="true"
-                  data-aos-anchor-placement="top-bottom"
-                >
-                  <JobBox {...jobItem} />
-                </div>
-              ))}
-            </div>
+            <LastJob />
           </div>
         </section>
 
@@ -367,19 +354,21 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
 
+        <section className="about">
           <div
             className="count-up"
-            data-aos="fade-up"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
             data-aos-offset="200"
             data-aos-duration="500"
-            data-aos-easing="ease-in-out"
             data-aos-once="true"
             data-aos-anchor-placement="top-bottom"
           >
             <div className="container count-box white-b">
               <div className="row">
-                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center border-end border-bottom">
                   <div className="count-number">
                     <CountUp
                       end={100}
@@ -388,9 +377,9 @@ export default function Home() {
                     />
                     K+
                   </div>
-                  <h6 className="fw-bold">Member Active</h6>
+                  <h6 className="fw-bold text-center">Member Active</h6>
                 </div>
-                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center border-end border-bottom">
                   <div className="count-number">
                     <CountUp
                       end={14}
@@ -399,9 +388,9 @@ export default function Home() {
                     />
                     K+
                   </div>
-                  <h6 className="fw-bold">Companies</h6>
+                  <h6 className="fw-bold text-center">Companies</h6>
                 </div>
-                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center border-end">
                   <div className="count-number">
                     <CountUp
                       end={270}
@@ -410,18 +399,447 @@ export default function Home() {
                     />
                     +
                   </div>
-                  <h6 className="fw-bold">Expert Trainers</h6>
+                  <h6 className="fw-bold text-center">Expert Trainers</h6>
                 </div>
-                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
+                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                   <div className="count-number">
                     <CountUp
                       end={15}
                       enableScrollSpy={true}
+                      scrollSpyOnce={true}
                       scrollSpyDelay={200}
+                      preserveValue={true}
                     />
                     K+
                   </div>
-                  <h6 className="fw-bold">Years of Experience</h6>
+                  <h6 className="fw-bold text-center">Years of Experience</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="container mt-5">
+            <div>
+              <div className="about-header">
+                <p className="green-t text-center">
+                  LETS START YOUR CAREERS HERE!
+                </p>
+                <span className="h1 text-center fw-bold d-block mb-4">
+                  What they say about us
+                </span>
+              </div>
+
+              <Swiper
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Pagination, Autoplay]}
+                className="mySwiper pb-5"
+              >
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="comment-box p-4 white-50-b rounded">
+                    <div className="comment-header text-center mb-4">
+                      <img
+                        className="img-user-comment"
+                        src="/images/freelancer.jpg"
+                        alt="img-user"
+                      />
+                    </div>
+
+                    <div className="comment-body text-center">
+                      <q className="black-50-t">
+                        Proin tempus pede eros nullam vivamus convallis nunc.
+                        Sollicitudin cubilia porta convallis ad donec semper
+                        aliquam aptent dignissim nunc.
+                      </q>
+                    </div>
+
+                    <div className="comment-footer mt-3">
+                      <cite className="d-flex flex-column align-items-center">
+                        <span className="text-center h5 fw-bold green-t">
+                          Stanley Mcdonald
+                        </span>
+                        <span className="text-center black-50-t">Sumatra</span>
+                      </cite>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </section>
+
+        <section className="benefit">
+          <div className="container">
+            <div className="row align-items-center">
+              <div
+                className="col-12 col-lg-6 order-1 order-lg-0 mt-5 mt-lg-0"
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor-placement="top-bottom"
+              >
+                <p className="green-t">LETS START YOUR CAREERS HERE!</p>
+                <span className="h1 fw-bold d-block mb-4">
+                  Adding People Strategy in Every Company.
+                </span>
+                <p className="black-50-t">
+                  Commodo vel nec eleifend fames ad tempus conubia interdum.
+                  Consectetur urna finibus porttitor ad si blandit dignissim.
+                </p>
+                <div className="d-flex align-items-center gap-3 mt-4">
+                  <PersonCircle className="green-b white-t benefit-icon" />
+                  <div>
+                    <span className="h5 fw-bold d-block">
+                      By real employees
+                    </span>
+                    <p className="black-50-t m-0">
+                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
+                      lectus sodales
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center gap-3 mt-3">
+                  <Headset className="green-b white-t benefit-icon" />
+                  <div>
+                    <span className="h5 fw-bold d-block">
+                      Comprehensive ratings
+                    </span>
+                    <p className="black-50-t m-0">
+                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
+                      lectus sodales
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center gap-3 mt-3">
+                  <Stars className="green-b white-t benefit-icon" />
+                  <div>
+                    <span className="h5 fw-bold d-block">Free Coaching</span>
+                    <p className="black-50-t m-0">
+                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
+                      lectus sodales
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-12 col-lg-6 order-0 order-lg-1"
+                data-aos="fade-zoom"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="200"
+                data-aos-duration="500"
+                data-aos-once="true"
+                data-aos-anchor-placement="top-bottom"
+              >
+                <div className="benefit-img-box">
+                  <img
+                    className="masking-img"
+                    src="/images/benefit.jpg"
+                    alt="benefit-img"
+                  ></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="">
+          <div className="container">
+            <div className="row">
+              <div
+                className="col-12 col-lg-6 order-1 order-lg-0 mt-5 mt-lg-0"
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor-placement="top-bottom"
+              >
+                <p className="green-t">LETS START YOUR CAREERS HERE!</p>
+                <span className="h1 fw-bold d-block mb-4">
+                  Adding People Strategy in Every Company.
+                </span>
+                <p className="black-50-t">
+                  Commodo vel nec eleifend fames ad tempus conubia interdum.
+                  Consectetur urna finibus porttitor ad si blandit dignissim.
+                </p>
+                <div className="d-flex align-items-center gap-3 mt-4">
+                  <PersonCircle className="green-b white-t benefit-icon" />
+                  <div>
+                    <span className="h5 fw-bold d-block">
+                      By real employees
+                    </span>
+                    <p className="black-50-t m-0">
+                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
+                      lectus sodales
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center gap-3 mt-3">
+                  <Headset className="green-b white-t benefit-icon" />
+                  <div>
+                    <span className="h5 fw-bold d-block">
+                      Comprehensive ratings
+                    </span>
+                    <p className="black-50-t m-0">
+                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
+                      lectus sodales
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center gap-3 mt-3">
+                  <Stars className="green-b white-t benefit-icon" />
+                  <div>
+                    <span className="h5 fw-bold d-block">Free Coaching</span>
+                    <p className="black-50-t m-0">
+                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
+                      lectus sodales
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

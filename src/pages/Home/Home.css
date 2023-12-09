@@ -83,8 +83,8 @@
   font-size: 3rem;
 }
 
-.services-bottom{
-    margin: 5rem 0 !important;
+.services-bottom {
+  margin: 5rem 0 !important;
 }
 
 .container-experience {
@@ -104,81 +104,79 @@
   width: 100%;
 }
 
-.experience-label{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    box-shadow: 0 0 20px 60px rgba(145, 145, 145, 0.152);
+.experience-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px 60px rgba(145, 145, 145, 0.152);
 }
 
-.experience-label span{
-font-size: 3rem;
-font-weight: 700;
+.experience-label span {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 /* ===============  END Services =============== */
 
-
-
 /** ===============  START Featured Company  =============== **/
-.featured-company{
+.featured-company {
   min-height: 60vh;
 }
 
-.featured-company-img-box{
+.featured-company-img-box {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   padding: 1rem;
-  margin: .1rem 0;
+  margin: 0.1rem 0;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.featured-company-img-box img{
+.featured-company-img-box img {
   object-fit: cover;
   width: 100%;
 }
-/* ===============  END Featured Compan =============== */
-
-
+/* ===============  END Featured Company =============== */
 
 /** ===============  START Community  =============== **/
-.community{
+.community {
   height: 90vh;
-  background-image: url('/public//images/positive-about.jpg');
+  background-image: url("/images/positive-about.jpg");
   background-position: center;
   background-size: cover;
 }
-.community-bg{
+.community-bg {
   display: flex;
   align-items: center;
-height: 100%;
-  background: linear-gradient(70deg, #183444 25%, #18344480 100%);;
+  height: 100%;
+  background: linear-gradient(70deg, #183444 25%, #18344480 100%);
 }
 
-.count-up{
-  position: absolute;
-  width: 100%;
-  bottom: -10%;
+/* ===============  END Community =============== */
+
+/** ===============  START About  =============== **/
+.count-up {
+  position: relative;
+  top: -4rem;
 }
 
-.count-box{
+.count-box {
   padding: 2rem 2rem;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -188,10 +186,45 @@ height: 100%;
   box-shadow: 0 0 10px 50px rgba(52, 52, 52, 0.06);
 }
 
-.count-number{
+.count-number {
   color: var(--green1);
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-/* ===============  END Community =============== */
+.img-user-comment {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 4px solid var(--black-50);
+}
+
+/* ===============  END About =============== */
+
+/** ===============  START Benefit  =============== **/
+.benefit {
+  margin: 10rem 0;
+}
+
+.benefit-img-box {
+  background-image: url(/images/bg2_img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.benefit-icon {
+  width: 4rem;
+  height: 4rem;
+  padding: .6rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* ===============  END Benefit =============== */
