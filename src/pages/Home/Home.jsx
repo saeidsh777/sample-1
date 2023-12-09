@@ -5,6 +5,7 @@ import AOS from "aos";
 import CountUp from "react-countup";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import Accordion from "react-bootstrap/Accordion";
 
 import { Mortarboard } from "react-bootstrap-icons";
 import { PersonCircle } from "react-bootstrap-icons";
@@ -787,11 +788,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="">
+        <section className="questions">
           <div className="container">
             <div className="row">
               <div
-                className="col-12 col-lg-6 order-1 order-lg-0 mt-5 mt-lg-0"
+                className="col-12 col-lg-4"
                 data-aos="fade-right"
                 data-aos-offset="200"
                 data-aos-duration="1000"
@@ -799,48 +800,105 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <p className="green-t">LETS START YOUR CAREERS HERE!</p>
-                <span className="h1 fw-bold d-block mb-4">
-                  Adding People Strategy in Every Company.
-                </span>
-                <p className="black-50-t">
-                  Commodo vel nec eleifend fames ad tempus conubia interdum.
-                  Consectetur urna finibus porttitor ad si blandit dignissim.
+                <p className="green-t text-center text-lg-start">
+                  COMMON QUESTIONS
                 </p>
-                <div className="d-flex align-items-center gap-3 mt-4">
-                  <PersonCircle className="green-b white-t benefit-icon" />
-                  <div>
-                    <span className="h5 fw-bold d-block">
-                      By real employees
-                    </span>
-                    <p className="black-50-t m-0">
-                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
-                      lectus sodales
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex align-items-center gap-3 mt-3">
-                  <Headset className="green-b white-t benefit-icon" />
-                  <div>
-                    <span className="h5 fw-bold d-block">
-                      Comprehensive ratings
-                    </span>
-                    <p className="black-50-t m-0">
-                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
-                      lectus sodales
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex align-items-center gap-3 mt-3">
-                  <Stars className="green-b white-t benefit-icon" />
-                  <div>
-                    <span className="h5 fw-bold d-block">Free Coaching</span>
-                    <p className="black-50-t m-0">
-                      Lorem sollicitudin orci lacinia inceptos feugiat quam et
-                      lectus sodales
-                    </p>
-                  </div>
-                </div>
+                <span className="h1 fw-bold d-block mb-4 text-center text-lg-start">
+                  Frequently Ask Question.
+                </span>
+                <p className="black-50-t text-center text-lg-start">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                  leo.
+                </p>
+              </div>
+
+              <div
+                className="col-12 col-lg-8 "
+                data-aos="fade-zoom"
+                data-aos-offset="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor-placement="top-bottom"
+              >
+                <Accordion>
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>
+                      Nec sit scelerisque curae montes et?
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>
+                      Vel neque duis lobortis elementum himenaeos erat?
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>
+                      Luctus aliquam elementum habitasse consequat quam?
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>
+                      Velit felis nisi non tempor eget?
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>
+                      Sit imperdiet fringilla nulla letius vestibulum?
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
               </div>
             </div>
           </div>
