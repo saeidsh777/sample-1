@@ -380,6 +380,7 @@ export default function Home() {
                       end={100}
                       enableScrollSpy={true}
                       scrollSpyDelay={200}
+                      scrollSpyOnce={true}
                     />
                     K+
                   </div>
@@ -391,6 +392,7 @@ export default function Home() {
                       end={14}
                       enableScrollSpy={true}
                       scrollSpyDelay={200}
+                      scrollSpyOnce={true}
                     />
                     K+
                   </div>
@@ -402,6 +404,7 @@ export default function Home() {
                       end={270}
                       enableScrollSpy={true}
                       scrollSpyDelay={200}
+                      scrollSpyOnce={true}
                     />
                     +
                   </div>
