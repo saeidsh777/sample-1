@@ -7,3 +7,11 @@
     border-bottom: none !important;
   }
 }
+
+@media only screen and (max-width: 991px) {
+  .img-footer {
+    position: relative;
+    margin: 2rem auto -3rem auto;
+    display: block;
+  }
+}

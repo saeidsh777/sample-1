@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+
 import Header from "../../Components/Header/Header";
 import LastJob from "../../Components/LastJob/LastJob";
-import AOS from "aos";
-import CountUp from "react-countup";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
 import Accordion from "react-bootstrap/Accordion";
+import Footer from "../../Components/Footer/Footer";
+
+import AOS from "aos";
+
+import CountUp from "react-countup";
+
+import { Pagination, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Mortarboard } from "react-bootstrap-icons";
 import { PersonCircle } from "react-bootstrap-icons";
@@ -732,7 +737,9 @@ export default function Home() {
                   Consectetur urna finibus porttitor ad si blandit dignissim.
                 </p>
                 <div className="d-flex align-items-center gap-3 mt-4">
-                  <PersonCircle className="green-b white-t benefit-icon" />
+                  <div className="benefit-icon-box green-b">
+                    <PersonCircle className="white-t benefit-icon" />
+                  </div>
                   <div>
                     <span className="h5 fw-bold d-block">
                       By real employees
@@ -744,7 +751,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex align-items-center gap-3 mt-3">
-                  <Headset className="green-b white-t benefit-icon" />
+                  <div className="benefit-icon-box green-b">
+                    <Headset className="white-t benefit-icon" />
+                  </div>
+
                   <div>
                     <span className="h5 fw-bold d-block">
                       Comprehensive ratings
@@ -756,7 +766,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex align-items-center gap-3 mt-3">
-                  <Stars className="green-b white-t benefit-icon" />
+                  <div className="benefit-icon-box green-b">
+                    <Stars className="white-t benefit-icon" />
+                  </div>
                   <div>
                     <span className="h5 fw-bold d-block">Free Coaching</span>
                     <p className="black-50-t m-0">
@@ -853,7 +865,7 @@ export default function Home() {
                       officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                   </Accordion.Item>
-                  <Accordion.Item eventKey="1">
+                  <Accordion.Item eventKey="2">
                     <Accordion.Header>
                       Luctus aliquam elementum habitasse consequat quam?
                     </Accordion.Header>
@@ -868,7 +880,7 @@ export default function Home() {
                       officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                   </Accordion.Item>
-                  <Accordion.Item eventKey="1">
+                  <Accordion.Item eventKey="3">
                     <Accordion.Header>
                       Velit felis nisi non tempor eget?
                     </Accordion.Header>
@@ -883,7 +895,7 @@ export default function Home() {
                       officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                   </Accordion.Item>
-                  <Accordion.Item eventKey="1">
+                  <Accordion.Item eventKey="4">
                     <Accordion.Header>
                       Sit imperdiet fringilla nulla letius vestibulum?
                     </Accordion.Header>
@@ -903,6 +915,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Footer />
       </main>
     </>
   );

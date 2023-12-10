@@ -1,0 +1,46 @@
+/** ===============  START Footer  =============== **/
+.footer {
+  background-color: var(--dark-blue);
+}
+
+.footer-header{
+    background-image: url(/images/bg_footer.jpg);
+    box-shadow: 0 0 30px 30px rgba(140, 140, 140, 0.274);
+    position: relative;
+    top: -3rem;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+
+.footer-header-body{
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+    padding: 3rem;
+    background: linear-gradient(70deg,#FFFFFF 25%, #FFFFFFCC 100%);
+    background-size: contain;
+    background-position: 200%;
+}
+
+.img-footer{
+    width: 20rem;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.footer-logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--white);
+}
+
+.footer-logo-select {
+  color: var(--green1) !important;
+}
+/* ===============  END Footer =============== */

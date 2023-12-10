@@ -37,6 +37,10 @@
 .white-t{
     color: var(--white);
 }
+.white-50-t{
+    color: var(--white-50);
+}
+
 .white-b{
     background-color: var(--white);
 }
