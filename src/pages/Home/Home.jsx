@@ -5,9 +5,8 @@ import LastJob from "../../Components/LastJob/LastJob";
 import Accordion from "react-bootstrap/Accordion";
 import Footer from "../../Components/Footer/Footer";
 
-import AOS from "aos";
+import AOS from "../../utils/aos";
 
-import CountUp from "react-countup";
 
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,37 +16,15 @@ import { PersonCircle } from "react-bootstrap-icons";
 import { Stars } from "react-bootstrap-icons";
 import { Headset } from "react-bootstrap-icons";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import "aos/dist/aos.css";
 import "./Home.css";
+import ImgTemplate from "../../Components/Experience/ImgTemplate";
+import Ltpb from "../../Components/Ptpb/Ltpb";
+import ServicesBox from "../../Components/ServicesBox/ServicesBox";
+import CountUpBox from "../../Components/CountUpBox/CountUpBox";
 
 export default function Home() {
-  AOS.init();
-  AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: "aos-init", // class applied after initialization
-    animatedClassName: "aos-animate", // class applied on animation
-    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 120, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 400, // values from 0 to 3000, with step 50ms
-    easing: "ease", // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-    anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-  });
-
   return (
-    <>
+    <div className="home">
       <Header>
         <section className="header-banner-home">
           <div className="container">
@@ -148,14 +125,12 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="services-box d-flex flex-column justify-content-center align-items-center gap-2 white-b">
-                  <Mortarboard className="text-center icon-services green-t" />
-                  <h5 className="text-center fw-bold">Talents Agency</h5>
-                  <p className="black-50-t text-center">
-                    Facilisi etiam consectetur mi nibh bibendum posuere
-                    ultricies cubilia donec potenti si
-                  </p>
-                </div>
+                <ServicesBox
+                  Icon={Mortarboard}
+                  title="Talents Agency"
+                  body="Facilisi etiam consectetur mi nibh bibendum posuere
+                    ultricies cubilia donec potenti si"
+                />
               </div>
 
               <div
@@ -167,14 +142,13 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="services-box d-flex flex-column justify-content-center align-items-center gap-2 green-b">
-                  <Mortarboard className="text-center icon-services white-t" />
-                  <h5 className="text-center fw-bold white-t">Portal Job</h5>
-                  <p className="white-t text-center">
-                    Facilisi etiam consectetur mi nibh bibendum posuere
-                    ultricies cubilia donec potenti si
-                  </p>
-                </div>
+                <ServicesBox
+                  bgG={true}
+                  Icon={Mortarboard}
+                  title="Portal Job"
+                  body="Facilisi etiam consectetur mi nibh bibendum posuere
+                    ultricies cubilia donec potenti si"
+                />
               </div>
 
               <div
@@ -186,14 +160,12 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="services-box d-flex flex-column justify-content-center align-items-center gap-2 white-b">
-                  <Mortarboard className="text-center icon-services green-t" />
-                  <h5 className="text-center fw-bold">Careers Coaching</h5>
-                  <p className="black-50-t text-center">
-                    Facilisi etiam consectetur mi nibh bibendum posuere
-                    ultricies cubilia donec potenti si
-                  </p>
-                </div>
+                <ServicesBox
+                  Icon={Mortarboard}
+                  title="Careers Coaching"
+                  body="Facilisi etiam consectetur mi nibh bibendum posuere
+                    ultricies cubilia donec potenti si"
+                />
               </div>
             </div>
 
@@ -207,21 +179,11 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="container-experience">
-                  <img
-                    className="masking-img"
-                    src="/images/image-woman.jpg"
-                    alt=""
-                  />
-                  <div className="experience-label white-b">
-                    <span className="green-t">15+</span>
-                    <p className="text-center">YEARS OF EXPERIENCE</p>
-                  </div>
-                </div>
+                <ImgTemplate srcImg="/images/image-woman.jpg" labelImg={true} />
               </div>
 
               <div
-                className="col-12 col-lg-6 mt-5 mt-lg-0"
+                className="col-12 col-lg-6 mt-5 mt-lg-0 ps-5"
                 data-aos="fade-left"
                 data-aos-offset="200"
                 data-aos-duration="1000"
@@ -229,19 +191,15 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="d-flex flex-column gap-3 ps-5">
-                  <p className="green-t m-0">OUR SERVICE</p>
-                  <span className="fw-bold m-0 h1">
-                    Bridge for industrial and corporate development.
-                  </span>
-                  <p className="black-50-t">
-                    Donec class lacinia vel hac laoreet amet et dictumst
+                <Ltpb
+                  l="OUR SERVICE"
+                  t="Bridge for industrial and corporate development."
+                  p="Donec class lacinia vel hac laoreet amet et dictumst
                     suspendisse. Maximus tortor pede egestas quis facilisis est.
                     Neque dis fringilla augue mollis viverra enim conubia
-                    pulvinar.
-                  </p>
-                  <button className="btn-c1">DISCOVER MORE</button>
-                </div>
+                    pulvinar."
+                  b="DISCOVER MORE"
+                />
               </div>
             </div>
           </div>
@@ -307,7 +265,7 @@ export default function Home() {
               </div>
 
               <div
-                className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1"
+                className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1 ps-lg-5"
                 data-aos="fade-left"
                 data-aos-offset="200"
                 data-aos-duration="1000"
@@ -315,14 +273,14 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="d-flex flex-column gap-3 ps-5">
-                  <span className="fw-bold m-0 h1">Featured Company</span>
-                  <p className="black-50-t">
-                    Dui vel aliquam nullam nulla natoque iaculis viverra conubia
+                <div className="d-flex flex-column gap-3">
+                  <Ltpb
+                    t="Featured Company"
+                    p="Dui vel aliquam nullam nulla natoque iaculis viverra conubia
                     letius. Primis non rhoncus dolor a urna finibus ultricies
-                    libero.
-                  </p>
-                  <button className="btn-c1">BROWSE COMPANY</button>
+                    libero."
+                    b="BROWSE COMPANY"
+                  />
                 </div>
               </div>
             </div>
@@ -335,7 +293,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-12">
                   <div
-                    className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1"
+                    className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1 ps-lg-5"
                     data-aos="fade-right"
                     data-aos-offset="200"
                     data-aos-duration="1000"
@@ -343,18 +301,15 @@ export default function Home() {
                     data-aos-once="true"
                     data-aos-anchor-placement="top-bottom"
                   >
-                    <div className="d-flex flex-column gap-3 ps-5">
-                      <span className="fw-bold m-0 h1 white-t">
-                        Join our community of talented professionals by applying
-                        for a job today!
-                      </span>
-                      <p className="white-t">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <Ltpb
+                      colorW
+                      t="Join our community of talented professionals by applying
+                        for a job today!"
+                      p="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                        dapibus leo.
-                      </p>
-                      <button className="btn-c1">DISCOVER MORE</button>
-                    </div>
+                        dapibus leo."
+                      b="DISCOVER MORE"
+                    />
                   </div>
                 </div>
               </div>
@@ -363,69 +318,7 @@ export default function Home() {
         </section>
 
         <section className="about">
-          <div
-            className="count-up"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-offset="200"
-            data-aos-duration="500"
-            data-aos-once="true"
-            data-aos-anchor-placement="top-bottom"
-          >
-            <div className="container count-box white-b">
-              <div className="row">
-                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center border-end border-bottom">
-                  <div className="count-number">
-                    <CountUp
-                      end={100}
-                      enableScrollSpy={true}
-                      scrollSpyDelay={200}
-                      scrollSpyOnce={true}
-                    />
-                    K+
-                  </div>
-                  <h6 className="fw-bold text-center">Member Active</h6>
-                </div>
-                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center border-end border-bottom">
-                  <div className="count-number">
-                    <CountUp
-                      end={14}
-                      enableScrollSpy={true}
-                      scrollSpyDelay={200}
-                      scrollSpyOnce={true}
-                    />
-                    K+
-                  </div>
-                  <h6 className="fw-bold text-center">Companies</h6>
-                </div>
-                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center border-end">
-                  <div className="count-number">
-                    <CountUp
-                      end={270}
-                      enableScrollSpy={true}
-                      scrollSpyDelay={200}
-                      scrollSpyOnce={true}
-                    />
-                    +
-                  </div>
-                  <h6 className="fw-bold text-center">Expert Trainers</h6>
-                </div>
-                <div className="col-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
-                  <div className="count-number">
-                    <CountUp
-                      end={15}
-                      enableScrollSpy={true}
-                      scrollSpyOnce={true}
-                      scrollSpyDelay={200}
-                      preserveValue={true}
-                    />
-                    K+
-                  </div>
-                  <h6 className="fw-bold text-center">Years of Experience</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CountUpBox/>
 
           <div className="container mt-5">
             <div>
@@ -731,14 +624,13 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <p className="green-t">LETS START YOUR CAREERS HERE!</p>
-                <span className="h1 fw-bold d-block mb-4">
-                  Adding People Strategy in Every Company.
-                </span>
-                <p className="black-50-t">
-                  Commodo vel nec eleifend fames ad tempus conubia interdum.
-                  Consectetur urna finibus porttitor ad si blandit dignissim.
-                </p>
+                <Ltpb
+                  l="LETS START YOUR CAREERS HERE!"
+                  t="Adding People Strategy in Every Company."
+                  p="Commodo vel nec eleifend fames ad tempus conubia interdum.
+                  Consectetur urna finibus porttitor ad si blandit dignissim."
+                />
+
                 <div className="d-flex align-items-center gap-3 mt-4">
                   <div className="benefit-icon-box green-b">
                     <PersonCircle className="white-t benefit-icon" />
@@ -791,13 +683,7 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <div className="benefit-img-box">
-                  <img
-                    className="masking-img"
-                    src="/images/benefit.jpg"
-                    alt="benefit-img"
-                  ></img>
-                </div>
+                <ImgTemplate srcImg="/images/benefit.jpg" />
               </div>
             </div>
           </div>
@@ -815,17 +701,13 @@ export default function Home() {
                 data-aos-once="true"
                 data-aos-anchor-placement="top-bottom"
               >
-                <p className="green-t text-center text-lg-start">
-                  COMMON QUESTIONS
-                </p>
-                <span className="h1 fw-bold d-block mb-4 text-center text-lg-start">
-                  Frequently Ask Question.
-                </span>
-                <p className="black-50-t text-center text-lg-start">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                <Ltpb
+                  l="COMMON QUESTIONS"
+                  t="Frequently Ask Question."
+                  p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                  leo.
-                </p>
+                  leo."
+                />
               </div>
 
               <div
@@ -921,6 +803,6 @@ export default function Home() {
 
         <Footer />
       </main>
-    </>
+    </div>
   );
 }

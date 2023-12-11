@@ -4,6 +4,11 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
 import './styles/reset.css'
 import './styles/root.css'
 import './styles/media.css'

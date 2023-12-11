@@ -63,7 +63,7 @@ export default function Header({ children }) {
                   </Link>
                 </li>
                 <li className="navlist-item">
-                  <span to="/jobs" className="navlink-item">
+                  <span className="navlink-item">
                     Job List
                     <ChevronDown size={15} className="ms-1" />
                     <ul className="sub-list white-b">

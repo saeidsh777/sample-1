@@ -4,6 +4,7 @@ import SocialIcon from "../SocialIcon/SocialIcon";
 import { Envelope } from "react-bootstrap-icons";
 
 import "./Footer.css";
+import Ltpb from "../Ptpb/Ltpb";
 
 export default function Footer() {
   return (
@@ -146,7 +147,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-12 col-lg-6">
             <small className="white-t d-block text-center text-lg-start">
-              Copyright © 2023 Job, All rights reserved. Developer by
+              Copyright © 2023 Job, All rights reserved. Developer
               <span className="green-t"> Saeid-Shojaei.</span>
             </small>
           </div>

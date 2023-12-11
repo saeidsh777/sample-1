@@ -2,6 +2,7 @@
 
 .header-container {
   background-color: var(--white);
+  z-index: 1000;
 }
 /* navlist-menu */
 .navlist-menu {
