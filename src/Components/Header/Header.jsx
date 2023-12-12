@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
+
 import { ChevronDown } from "react-bootstrap-icons";
 import { List } from "react-bootstrap-icons";
 import { X } from "react-bootstrap-icons";
@@ -7,10 +8,12 @@ import { X } from "react-bootstrap-icons";
 import "./Header.css";
 
 export default function Header({ children }) {
+  const params = useParams()
   const [showMenu, setShowMenu] = useState(false);
   const jubElm = useRef(null);
   const pageElm = useRef(null);
 
+  
   useEffect(() => {
     function checkScreen() {
       if (window.screen.width > 992) {
@@ -53,14 +56,28 @@ export default function Header({ children }) {
             <nav className="d-none d-lg-block navlist">
               <ul className="d-flex">
                 <li className="navlist-item">
-                  <Link to="/" className="navlink-item navlink-item-active">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "navlink-item navlink-item-active"
+                        : "navlink-item"
+                    }
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="navlist-item">
-                  <Link to="/about" className="navlink-item">
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "navlink-item navlink-item-active"
+                        : "navlink-item"
+                    }
+                  >
                     About us
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="navlist-item">
                   <span className="navlink-item">
@@ -77,7 +94,16 @@ export default function Header({ children }) {
                   </span>
                 </li>
                 <li className="navlist-item">
-                  <Link className="navlink-item">Contact us</Link>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "navlink-item navlink-item-active"
+                        : "navlink-item"
+                    }
+                  >
+                    Contact us
+                  </NavLink>
                 </li>
                 <li className="navlist-item">
                   <span className="navlink-item">
@@ -115,14 +141,28 @@ export default function Header({ children }) {
           <nav className={`${showMenu ? "d-lg-none navlist-menu" : "d-none"}`}>
             <ul className="d-flex flex-column px-3">
               <li className="navlist-item">
-                <Link to="/" className="navlink-item">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "navlink-item navlink-item-active"
+                      : "navlink-item"
+                  }
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="navlist-item">
-                <Link to="/about" className="navlink-item">
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "navlink-item navlink-item-active"
+                      : "navlink-item"
+                  }
+                >
                   About us
-                </Link>
+                </NavLink>
               </li>
               <li className="navlist-item" onClick={() => showSubMenu(jubElm)}>
                 <span className="navlink-item">
@@ -139,7 +179,15 @@ export default function Header({ children }) {
                 </span>
               </li>
               <li className="navlist-item">
-                <Link className="navlink-item">Contact us</Link>
+                <NavLink to="/contact"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "navlink-item navlink-item-active"
+                      : "navlink-item"
+                  }
+                >
+                  Contact us
+                </NavLink>
               </li>
               <li className="navlist-item" onClick={() => showSubMenu(pageElm)}>
                 <span className="navlink-item">

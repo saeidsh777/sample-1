@@ -5,17 +5,18 @@ import ImgTemplate from "../../Components/Experience/ImgTemplate";
 import ServicesBox from "../../Components/ServicesBox/ServicesBox";
 import { LightbulbFill } from "react-bootstrap-icons";
 
-import AOS from "../../utils/aos";
-
 import "./About.css";
 import CountUpBox from "../../Components/CountUpBox/CountUpBox";
+import AboutManager from "../../Components/AboutManager/AboutManager";
+import FeaturedCompany from "../../Components/FeaturedCompany/FeaturedCompany";
+import Footer from "../../Components/Footer/Footer";
 
 export default function About() {
   return (
     <div className="About">
       <Header>
         <section className="header-banner-about d-flex align-items-center justify-content-center position-relative">
-          <div className="bg-cover"></div>
+          <div className="bg-cover-blue-color"></div>
           <div
             className="container position-relative"
             data-aos="fade-up"
@@ -40,11 +41,9 @@ export default function About() {
               <div
                 className="col-12 col-lg-6"
                 data-aos="fade-right"
-                data-aos-offset="200"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-bottom"
               >
                 <Ltpb
                   l="WHO WE ARE"
@@ -56,11 +55,9 @@ export default function About() {
               <div
                 className="col-12 col-lg-6 mt-5 mt-lg-0"
                 data-aos="fade-left"
-                data-aos-offset="200"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-bottom"
               >
                 <ImgTemplate
                   srcImg="/images/portrait-black.jpg"
@@ -151,12 +148,20 @@ export default function About() {
           </div>
         </section>
 
-        <section>
+        <section className="pb-5">
           <CountUpBox />
 
-          <div className="container">
+          <div className="container pb-5">
             <div className="row">
-              <div className="col-12 col-xl-6 m-auto">
+              <div
+                className="col-12 col-xl-6 m-auto"
+                data-aos="fade-up"
+                data-aos-offset="100"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <span className="d-block text-center h1 fw-bold">
                   Awesome people behind us.
                 </span>
@@ -166,16 +171,31 @@ export default function About() {
                   leo.
                 </p>
               </div>
-              <div className="col-12">
+              <div className="col-12 mt-5">
                 <div className="row">
-                    <div className="col-3">
-                        
-                    </div>
+                  <div className="col-12 col-md-6 col-lg-3 my-3 my-lg-0">
+                    <AboutManager srcImg="/images/manager-1.jpg" />
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-3 my-3 my-lg-0">
+                    <AboutManager srcImg="/images/manager-2.jpg" />
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-3 my-3 my-lg-0">
+                    <AboutManager srcImg="/images/manager-3.jpg" />
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-3 my-3 my-lg-0">
+                    <AboutManager srcImg="/images/manager-4.jpg" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <div className="white-50-b" style={{ paddingBottom: "7rem" }}>
+          <FeaturedCompany />
+        </div>
+
+        <Footer />
       </main>
     </div>
   );

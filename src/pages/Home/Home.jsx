@@ -5,9 +5,6 @@ import LastJob from "../../Components/LastJob/LastJob";
 import Accordion from "react-bootstrap/Accordion";
 import Footer from "../../Components/Footer/Footer";
 
-import AOS from "../../utils/aos";
-
-
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,11 +13,13 @@ import { PersonCircle } from "react-bootstrap-icons";
 import { Stars } from "react-bootstrap-icons";
 import { Headset } from "react-bootstrap-icons";
 
-import "./Home.css";
 import ImgTemplate from "../../Components/Experience/ImgTemplate";
 import Ltpb from "../../Components/Ptpb/Ltpb";
 import ServicesBox from "../../Components/ServicesBox/ServicesBox";
 import CountUpBox from "../../Components/CountUpBox/CountUpBox";
+import "./Home.css";
+import CommentBox from "../../Components/CommentBox/CommentBox";
+import FeaturedCompany from "../../Components/FeaturedCompany/FeaturedCompany";
 
 export default function Home() {
   return (
@@ -210,82 +209,8 @@ export default function Home() {
             <LastJob />
           </div>
         </section>
-
-        <section className="featured-company d-flex align-items-center white-50-b">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-12 col-lg-6 order-1 order-lg-0 mt-5 mt-lg-0">
-                <div className="row">
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/velocity-1.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-2.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-3.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-4.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-5.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-6.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-7.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-8.png" alt="velocity" />
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-4 gx-1">
-                    <div className="white-b featured-company-img-box">
-                      <img src="/images/vector-9.png" alt="velocity" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1 ps-lg-5"
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-once="true"
-                data-aos-anchor-placement="top-bottom"
-              >
-                <div className="d-flex flex-column gap-3">
-                  <Ltpb
-                    t="Featured Company"
-                    p="Dui vel aliquam nullam nulla natoque iaculis viverra conubia
-                    letius. Primis non rhoncus dolor a urna finibus ultricies
-                    libero."
-                    b="BROWSE COMPANY"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
+        <FeaturedCompany/>
 
         <section className="community position-relative">
           <div className="community-bg">
@@ -318,11 +243,19 @@ export default function Home() {
         </section>
 
         <section className="about">
-          <CountUpBox/>
+          <CountUpBox />
 
           <div className="container mt-5">
             <div>
-              <div className="about-header">
+              <div
+                className="about-header"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <p className="green-t text-center">
                   LETS START YOUR CAREERS HERE!
                 </p>
@@ -355,257 +288,31 @@ export default function Home() {
                 className="mySwiper pb-5"
               >
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="comment-box p-4 white-50-b rounded">
-                    <div className="comment-header text-center mb-4">
-                      <img
-                        className="img-user-comment"
-                        src="/images/freelancer.jpg"
-                        alt="img-user"
-                      />
-                    </div>
-
-                    <div className="comment-body text-center">
-                      <q className="black-50-t">
-                        Proin tempus pede eros nullam vivamus convallis nunc.
-                        Sollicitudin cubilia porta convallis ad donec semper
-                        aliquam aptent dignissim nunc.
-                      </q>
-                    </div>
-
-                    <div className="comment-footer mt-3">
-                      <cite className="d-flex flex-column align-items-center">
-                        <span className="text-center h5 fw-bold green-t">
-                          Stanley Mcdonald
-                        </span>
-                        <span className="text-center black-50-t">Sumatra</span>
-                      </cite>
-                    </div>
-                  </div>
+                  <CommentBox/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <CommentBox/>
                 </SwiperSlide>
               </Swiper>
             </div>
