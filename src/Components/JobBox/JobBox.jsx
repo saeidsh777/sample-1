@@ -4,6 +4,7 @@ import { StopwatchFill } from "react-bootstrap-icons";
 import { Coin } from "react-bootstrap-icons";
 
 import "./JobBox.css";
+import { Link } from "react-router-dom";
 
 export default function JobBox(props) {
   return (
@@ -19,7 +20,9 @@ export default function JobBox(props) {
         </div>
         <div className="title-job-box">
           <small className="black-50-t">{props.location}</small>
-          <h5 className="fw-bold m-0">{props.jobTitle}</h5>
+          <Link to={`/job/${props.jobID}`} className="h5 fw-bold m-0 d-block">
+            {props.jobTitle}
+          </Link>
         </div>
       </div>
 
@@ -46,8 +49,10 @@ export default function JobBox(props) {
             </div>
           </div>
 
-          <div className="col-12 col-xl-6 mt-2 mt-xl-0">
-            <button className="btn-c1">APPLY NOW</button>
+          <div className="col-12 col-xl-6 mt-2 mt-xl-0 d-flex align-items-center justify-content-xl-end">
+            <Link to={`/job/${props.jobID}`} className="btn-c1 d-block ">
+              Job Info
+            </Link>
           </div>
         </div>
       </div>

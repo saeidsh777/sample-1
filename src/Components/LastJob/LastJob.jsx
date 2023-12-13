@@ -14,7 +14,7 @@ export default function LastJob() {
 
         {jobData.map((jobItem, index) => (
           <div
-            key={index}
+            key={jobItem.jobID}
             className="col-12 col-lg-4 mb-4"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
