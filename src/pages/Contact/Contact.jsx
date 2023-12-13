@@ -16,6 +16,22 @@ import "./Contact.css";
 export default function Contact() {
   const [formState, onValidHandler] = useForm(
     {
+      name: {
+        value: "",
+        isValidInput: false,
+      },
+      company: {
+        value: "",
+        isValidInput: false,
+      },
+      phone: {
+        value: "",
+        isValidInput: false,
+      },
+      email: {
+        value: "",
+        isValidInput: false,
+      },
       message: {
         value: "",
         isValidInput: false,
@@ -31,6 +47,7 @@ export default function Contact() {
   useState(() => {
     console.log(formState);
   }, [formState]);
+
   return (
     <div className="Contact">
       <Header>
@@ -142,12 +159,10 @@ export default function Contact() {
                       <label className="label-input" htmlFor="name">
                         Name
                       </label>
-                      <input
+                      <Input
+                        typeInput="text"
                         id="name"
-                        className="input"
-                        name="name"
-                        type="text"
-                        placeholder="Name"
+                        onValidHandler={onValidHandler}
                       />
                     </div>
 
@@ -155,12 +170,10 @@ export default function Contact() {
                       <label className="label-input" htmlFor="Company">
                         Company
                       </label>
-                      <input
-                        id="Company"
-                        className="input"
-                        name="Company"
-                        type="text"
-                        placeholder="Company"
+                      <Input
+                        typeInput="text"
+                        id="company"
+                        onValidHandler={onValidHandler}
                       />
                     </div>
 
@@ -168,12 +181,10 @@ export default function Contact() {
                       <label className="label-input" htmlFor="Phone">
                         Phone
                       </label>
-                      <input
-                        id="Phone"
-                        className="input"
-                        name="Phone"
-                        type="text"
-                        placeholder="Phone"
+                      <Input
+                        typeInput="text"
+                        id="phone"
+                        onValidHandler={onValidHandler}
                       />
                     </div>
 
@@ -181,12 +192,10 @@ export default function Contact() {
                       <label className="label-input" htmlFor="Email">
                         Email
                       </label>
-                      <input
-                        id="Email"
-                        className="input"
-                        name="Email"
-                        type="text"
-                        placeholder="Email"
+                      <Input
+                        typeInput="email"
+                        id="email"
+                        onValidHandler={onValidHandler}
                       />
                     </div>
 
@@ -218,25 +227,23 @@ export default function Contact() {
                       <label className="label-input" htmlFor="Subject">
                         Subject
                       </label>
-                      <Input id="subject" onValidHandler={onValidHandler} />
+                      <Input
+                        typeInput="text"
+                        id="subject"
+                        onValidHandler={onValidHandler}
+                      />
                     </div>
 
                     <div className="col-12 d-flex flex-column mb-3">
                       <label className="label-input" htmlFor="Message">
                         Message
                       </label>
-                      <textarea
-                        className="input"
+                      <Input
+                        id="message"
+                        typeInput="textArea"
                         name="Message"
-                        type="text"
-                        placeholder="Message"
+                        onValidHandler={onValidHandler}
                       />
-                    </div>
-                    <div className="col-12 d-flex flex-column mb-3">
-                      <label className="label-input" htmlFor="Message">
-                        Test Input
-                      </label>
-                      <Input id="message" onValidHandler={onValidHandler} />
                     </div>
 
                     <div className="col-12">

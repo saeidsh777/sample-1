@@ -29,16 +29,43 @@ export default function Input(props) {
     props.onValidHandler(props.id, value, mainInput.isValid);
   }, [value]);
 
-
   return (
-    <input
-      className="input"
-      type="text"
-      placeholder="Name"
-      value={value}
-      onChange={(e) => {
-        dispatch({ type: "CHANGE-INPUT", value: e.target.value });
-      }}
-    />
+    <>
+      {props.typeInput === "text" && (
+        <input
+          className="input"
+          type={props.typeInput}
+          placeholder={props.Name}
+          value={value}
+          onChange={(e) => {
+            dispatch({ type: "CHANGE-INPUT", value: e.target.value });
+          }}
+        />
+      )}
+
+      {props.typeInput === "email" && (
+        <input
+          className="input"
+          type={props.typeInput}
+          placeholder={props.Name}
+          value={value}
+          onChange={(e) => {
+            dispatch({ type: "CHANGE-INPUT", value: e.target.value });
+          }}
+        />
+      )}
+
+      {props.typeInput === "textArea" && (
+        <textarea
+          className="input"
+          placeholder={props.Name}
+          value={value}
+          onChange={(e) => {
+            dispatch({ type: "CHANGE-INPUT", value: e.target.value });
+          }}
+        />
+      )}
+      
+    </>
   );
 }
