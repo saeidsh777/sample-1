@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Header from "../../Components/Header/Header";
 import Ltpb from "../../Components/Ptpb/Ltpb";
-import Footer from '../../Components/Footer/Footer'
+import Footer from "../../Components/Footer/Footer";
+import Input from "../../Components/Input/Input";
+
+import { useForm } from "../../Hooks/useForm";
 
 import { GeoAltFill } from "react-bootstrap-icons";
 import { EnvelopeFill } from "react-bootstrap-icons";
 import { TelephoneFill } from "react-bootstrap-icons";
 
 import "./Contact.css";
+
 export default function Contact() {
+  const [formState, onValidHandler] = useForm(
+    {
+      message: {
+        value: "",
+        isValidInput: false,
+      },
+      subject: {
+        value: "",
+        isValidInput: false,
+      },
+    },
+    false
+  );
+
+  useState(() => {
+    console.log(formState);
+  }, [formState]);
   return (
     <div className="Contact">
       <Header>
@@ -197,13 +218,7 @@ export default function Contact() {
                       <label className="label-input" htmlFor="Subject">
                         Subject
                       </label>
-                      <input
-                        id="Subject"
-                        className="input"
-                        name="Subject"
-                        type="text"
-                        placeholder="Subject"
-                      />
+                      <Input id="subject" onValidHandler={onValidHandler} />
                     </div>
 
                     <div className="col-12 d-flex flex-column mb-3">
@@ -211,16 +226,23 @@ export default function Contact() {
                         Message
                       </label>
                       <textarea
-                        id="Message"
                         className="input"
                         name="Message"
                         type="text"
                         placeholder="Message"
                       />
                     </div>
+                    <div className="col-12 d-flex flex-column mb-3">
+                      <label className="label-input" htmlFor="Message">
+                        Test Input
+                      </label>
+                      <Input id="message" onValidHandler={onValidHandler} />
+                    </div>
 
                     <div className="col-12">
-                      <button className="btn-c1 w-100 w-lg-auto">Send Message</button>
+                      <button className="btn-c1 w-100 w-lg-auto">
+                        Send Message
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -230,7 +252,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
