@@ -10,6 +10,10 @@
   padding: 8rem 0;
 }
 
+.send-message {
+padding-bottom: 5rem;
+}
+
 .send-message-banner {
   background-image: url(/images/working.jpg);
   background-attachment: fixed;
@@ -59,11 +63,11 @@
   color: var(--black-50);
 }
 
-select {
+.select-box {
   border: none;
   background: var(--white-50);
   color: var(--black-50);
-  padding: 0.7rem;
+  padding: .8rem;
   outline: none;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -72,7 +76,7 @@ select {
   -o-border-radius: 5px;
 }
 
-/* select option:hover{
-    background-color: var(--black-50) !important;
-    color: red !important;
-}  */
+.select-box:focus {
+  outline: 2px solid var(--green1);
+  background-color: var(--white);
+}

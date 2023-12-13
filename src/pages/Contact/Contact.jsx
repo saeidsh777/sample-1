@@ -1,10 +1,14 @@
 import React from "react";
-import "./Contact.css";
-import Ltpb from "../../Components/Ptpb/Ltpb";
+
 import Header from "../../Components/Header/Header";
+import Ltpb from "../../Components/Ptpb/Ltpb";
+import Footer from '../../Components/Footer/Footer'
+
 import { GeoAltFill } from "react-bootstrap-icons";
 import { EnvelopeFill } from "react-bootstrap-icons";
 import { TelephoneFill } from "react-bootstrap-icons";
+
+import "./Contact.css";
 export default function Contact() {
   return (
     <div className="Contact">
@@ -84,7 +88,13 @@ export default function Contact() {
         <div className="send-message-banner d-flex align-items-center justify-content-center position-relative">
           <div className="bg-cover-blue-color"></div>
           <div className="container position-relative">
-            <div className="col-6 m-auto d-flex flex-column justify-content-center align-items-center">
+            <div
+              className="col-6 m-auto d-flex flex-column justify-content-center align-items-center"
+              data-aos="fade-down"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+            >
               <h1 className="fw-bold text-center white-t">Send us a message</h1>
               <p className="text-center white-t">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -95,7 +105,15 @@ export default function Contact() {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-12 col-lg-7 mx-auto">
+            <div
+              className="col-12 col-lg-7 mx-auto"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+              data-aos-anchor-placement="top-bottom"
+            >
               <div className="form-box p-3 p-md-5">
                 <form>
                   <div className="row">
@@ -157,12 +175,52 @@ export default function Contact() {
                       </label>
                       <select
                         id="Division"
-                        className="select-box"
+                        className="select-box decorated"
                         defaultValue="ok"
                       >
-                        <option  value="-1">Operational</option>
-                        <option  value="Operational">saeid</option>
+                        <option className="option-item" value="-1">
+                          Operational
+                        </option>
+                        <option className="option-item" value="Operational">
+                          Human Resource
+                        </option>
+                        <option className="option-item" value="Operational">
+                          Marketing
+                        </option>
+                        <option className="option-item" value="Operational">
+                          Technical Support
+                        </option>
                       </select>
+                    </div>
+
+                    <div className="col-12 col-md-6 d-flex flex-column mb-3">
+                      <label className="label-input" htmlFor="Subject">
+                        Subject
+                      </label>
+                      <input
+                        id="Subject"
+                        className="input"
+                        name="Subject"
+                        type="text"
+                        placeholder="Subject"
+                      />
+                    </div>
+
+                    <div className="col-12 d-flex flex-column mb-3">
+                      <label className="label-input" htmlFor="Message">
+                        Message
+                      </label>
+                      <textarea
+                        id="Message"
+                        className="input"
+                        name="Message"
+                        type="text"
+                        placeholder="Message"
+                      />
+                    </div>
+
+                    <div className="col-12">
+                      <button className="btn-c1 w-100 w-lg-auto">Send Message</button>
                     </div>
                   </div>
                 </form>
@@ -171,6 +229,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 }
