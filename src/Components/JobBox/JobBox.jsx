@@ -1,10 +1,9 @@
 import React from "react";
-import { PatchCheckFill } from "react-bootstrap-icons";
-import { StopwatchFill } from "react-bootstrap-icons";
-import { Coin } from "react-bootstrap-icons";
+
+import { PatchCheckFill, StopwatchFill, Coin } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 import "./JobBox.css";
-import { Link } from "react-router-dom";
 
 export default function JobBox(props) {
   return (

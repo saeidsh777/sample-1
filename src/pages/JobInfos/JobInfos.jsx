@@ -1,28 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
 import Header from "../../Components/Header/Header";
 import jobDatas from "../../data/jobData";
+import Footer from "../../Components/Footer/Footer";
+
 
 import "./JobInfos.css";
-import JobBox from "../../Components/JobBox/JobBox";
+import JobDetail from "../../Components/JobDetail/JobDetail";
 export default function JobInfos() {
   const [mainJob, setMainJob] = useState({});
   const { jobID } = useParams();
 
-  useEffect(()=>{
-    setMainJob(...jobDatas.filter(job => job.jobID === jobID));
-  },[])
+  useEffect(() => {
+    setMainJob(...jobDatas.filter((job) => job.jobID === jobID));
+  }, []);
 
   return (
     <div>
       <Header />
-      <div className="container">
-        <div className="row">
-          <div className="col-8">
-            <JobBox {...mainJob}/>
+      <section className="job-infos white-50-b">
+        <div className="container-fluid container-lg">
+          <div className="row">
+            <div className="col-12 col-xl-8">
+              <JobDetail {...mainJob} />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <Footer/>
     </div>
   );
 }
