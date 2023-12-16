@@ -1,6 +1,8 @@
 import Contact from "../pages/Contact/Contact"
 import Home from "../pages/Home/Home"
 import JobInfos from "../pages/JobInfos/JobInfos"
+import PageNotFound from "../pages/PageNotFound/PageNotFound"
+
 import About from "../pages/about/about"
 
 export const route = [
@@ -8,4 +10,5 @@ export const route = [
     {path:'/about', element:<About/>},
     {path:'/contact', element:<Contact/>},
     {path:'/job/:jobID', element:<JobInfos/>},
+    {path:'*', element:<PageNotFound/>},
 ]

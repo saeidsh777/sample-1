@@ -6,7 +6,6 @@ import {
 } from "react-bootstrap-icons";
 
 import "./JobDetail.css";
-import { ScrollRestoration } from "react-router-dom";
 
 export default function JobDetail(props) {
   console.log(props);

@@ -1,0 +1,30 @@
+.page-not-found {
+  height: 100vh;
+  background-image: url(/images/female-hand-touching.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.not-found-container {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: var(--shadow1);
+  padding: 3rem;
+}
+
+.bg-cover-white-color {
+    opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  background: radial-gradient(
+    at center center,
+    #ffffffcc 0%,
+   #FFFFFF 100%
+  );
+}
