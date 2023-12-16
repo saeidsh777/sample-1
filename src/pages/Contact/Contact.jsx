@@ -160,6 +160,7 @@ export default function Contact() {
                         Name
                       </label>
                       <Input
+                        Name="Name"
                         typeInput="text"
                         id="name"
                         onValidHandler={onValidHandler}
@@ -171,6 +172,7 @@ export default function Contact() {
                         Company
                       </label>
                       <Input
+                        Name="Company"
                         typeInput="text"
                         id="company"
                         onValidHandler={onValidHandler}
@@ -182,6 +184,7 @@ export default function Contact() {
                         Phone
                       </label>
                       <Input
+                        Name="Phone"
                         typeInput="text"
                         id="phone"
                         onValidHandler={onValidHandler}
@@ -193,6 +196,7 @@ export default function Contact() {
                         Email
                       </label>
                       <Input
+                        Name="Email"
                         typeInput="email"
                         id="email"
                         onValidHandler={onValidHandler}
@@ -228,6 +232,7 @@ export default function Contact() {
                         Subject
                       </label>
                       <Input
+                        Name="Subject"
                         typeInput="text"
                         id="subject"
                         onValidHandler={onValidHandler}
@@ -241,7 +246,7 @@ export default function Contact() {
                       <Input
                         id="message"
                         typeInput="textArea"
-                        name="Message"
+                        Name="Message"
                         onValidHandler={onValidHandler}
                       />
                     </div>

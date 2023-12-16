@@ -1,16 +1,12 @@
 import React from "react";
-
 import {
   CheckCircleFill,
-  Coin,
   CurrencyDollar,
   GeoAltFill,
-  PatchCheckFill,
-  StopwatchFill,
 } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
 
 import "./JobDetail.css";
+import { ScrollRestoration } from "react-router-dom";
 
 export default function JobDetail(props) {
   console.log(props);

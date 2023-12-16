@@ -16,9 +16,9 @@ export default function AboutCompany(props) {
         </div>
         <div className="title-job-box">
           <small className="black-50-t">{props.location}</small>
-          <Link to={`/job/${props.jobID}`} className="h5 fw-bold m-0 d-block">
+          <span className="h5 fw-bold m-0 d-block">
             {props.jobTitle}
-          </Link>
+          </span>
         </div>
       </div>
 

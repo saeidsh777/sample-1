@@ -26,7 +26,7 @@ export default function Input(props) {
   const { value } = mainInput;
 
   useEffect(() => {
-    props.onValidHandler(props.id, value, mainInput.isValid);
+    props.onValidHandler && props.onValidHandler(props.id, value, mainInput.isValid);
   }, [value]);
 
   return (

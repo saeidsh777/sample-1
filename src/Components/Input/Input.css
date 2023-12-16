@@ -1,0 +1,21 @@
+.input {
+    width: 100%;
+  border: none;
+  background-color: var(--white-50);
+  color: var(--black-50);
+  padding: 0.7rem;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.input:focus {
+  outline: 2px solid var(--green1);
+  background-color: var(--white);
+}
+.input::placeholder {
+  color: var(--black-50);
+}
