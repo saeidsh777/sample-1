@@ -10,7 +10,7 @@ export default function PageNotFound() {
   return (
     <>
       <Header />
-      <div className="page-not-found d-flex align-items-center position-relative">
+      <section className="page-not-found d-flex align-items-center position-relative">
         <div className="bg-cover-white-color"></div>
         <div className="container position-relative">
           <div className="row justify-content-center ">
@@ -36,7 +36,7 @@ export default function PageNotFound() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   );
