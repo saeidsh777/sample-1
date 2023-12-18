@@ -8,7 +8,6 @@ import {
 import "./JobDetail.css";
 
 export default function JobDetail(props) {
-  console.log(props);
   return (
     <div className="jobDetail white-b">
       <span className="valid-company d-flex align-items-center gap-2">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 import Header from "../../Components/Header/Header";
 import jobDatas from "../../data/jobData";
@@ -23,6 +23,7 @@ export default function JobInfos() {
 
   return (
     <div>
+      {!mainJob && <Navigate to="*"/> }
       <Header />
       <section className="job-infos white-50-b">
         <div className="container-fluid container-lg">
@@ -73,8 +74,9 @@ export default function JobInfos() {
                       <Input typeInput="email" Name="Email" />
                     </div>
                     <button className="btn-c2 mt-3 w-100 w-lg-auto justify-content-center justify-content-xl-start d-flex align-items-center gap-1">
-                      <EnvelopeFill/>
-                      Sign Up</button>
+                      <EnvelopeFill />
+                      Sign Up
+                    </button>
                   </div>
                 </div>
               </div>

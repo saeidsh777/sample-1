@@ -80,7 +80,14 @@ export default function Header({ children }) {
                   </NavLink>
                 </li>
                 <li className="navlist-item">
-                  <span className="navlink-item">
+                  <NavLink
+                    to="/job"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "navlink-item navlink-item-active"
+                        : "navlink-item"
+                    }
+                  >
                     Job List
                     <ChevronDown size={15} className="ms-1" />
                     <ul className="sub-list white-b">
@@ -91,7 +98,7 @@ export default function Header({ children }) {
                         <Link className="sub-navlist-item">BackEnd</Link>
                       </li>
                     </ul>
-                  </span>
+                  </NavLink>
                 </li>
                 <li className="navlist-item">
                   <NavLink
@@ -104,33 +111,6 @@ export default function Header({ children }) {
                   >
                     Contact us
                   </NavLink>
-                </li>
-                <li className="navlist-item">
-                  <span className="navlink-item">
-                    Pages
-                    <ChevronDown size={15} className="ms-1" />
-                    <i className="bi bi-chevron-down"></i>
-                    <ul className="sub-list white-b">
-                      <li className="sub-list-item">
-                        <Link className="sub-navlist-item">Services</Link>
-                      </li>
-                      <li className="sub-list-item">
-                        <Link className="sub-navlist-item">Help Center</Link>
-                      </li>
-                      <li className="sub-list-item">
-                        <Link className="sub-navlist-item">Team</Link>
-                      </li>
-                      <li className="sub-list-item">
-                        <Link className="sub-navlist-item">Blog</Link>
-                      </li>
-                      <li className="sub-list-item">
-                        <Link className="sub-navlist-item">Single post</Link>
-                      </li>
-                      <li className="sub-list-item">
-                        <Link className="sub-navlist-item">Error 404</Link>
-                      </li>
-                    </ul>
-                  </span>
                 </li>
               </ul>
             </nav>
@@ -179,7 +159,8 @@ export default function Header({ children }) {
                 </span>
               </li>
               <li className="navlist-item">
-                <NavLink to="/contact"
+                <NavLink
+                  to="/contact"
                   className={({ isActive }) =>
                     isActive
                       ? "navlink-item navlink-item-active"
