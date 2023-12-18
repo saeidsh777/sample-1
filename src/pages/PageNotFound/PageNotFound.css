@@ -1,5 +1,6 @@
 .page-not-found {
-  height: 100vh;
+  /* height: 120vh; */
+  padding: 10rem 0;
   background-image: url(/images/female-hand-touching.jpg);
   background-repeat: no-repeat;
   background-size: cover;
