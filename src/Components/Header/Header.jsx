@@ -145,7 +145,14 @@ export default function Header({ children }) {
                 </NavLink>
               </li>
               <li className="navlist-item" onClick={() => showSubMenu(jubElm)}>
-                <span className="navlink-item">
+                <NavLink
+                  to="/job"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "navlink-item navlink-item-active"
+                      : "navlink-item"
+                  }
+                >
                   Job List
                   <ChevronDown size={15} className="ms-1" />
                   <ul className="sub-list" ref={jubElm}>
@@ -156,7 +163,7 @@ export default function Header({ children }) {
                       <Link className="sub-navlist-item">BackEnd</Link>
                     </li>
                   </ul>
-                </span>
+                </NavLink>
               </li>
               <li className="navlist-item">
                 <NavLink
@@ -169,33 +176,6 @@ export default function Header({ children }) {
                 >
                   Contact us
                 </NavLink>
-              </li>
-              <li className="navlist-item" onClick={() => showSubMenu(pageElm)}>
-                <span className="navlink-item">
-                  Pages
-                  <ChevronDown size={15} className="ms-1" />
-                  <i className="bi bi-chevron-down"></i>
-                  <ul className="sub-list" ref={pageElm}>
-                    <li className="sub-list-item">
-                      <Link className="sub-navlist-item">Services</Link>
-                    </li>
-                    <li className="sub-list-item">
-                      <Link className="sub-navlist-item">Help Center</Link>
-                    </li>
-                    <li className="sub-list-item">
-                      <Link className="sub-navlist-item">Team</Link>
-                    </li>
-                    <li className="sub-list-item">
-                      <Link className="sub-navlist-item">Blog</Link>
-                    </li>
-                    <li className="sub-list-item">
-                      <Link className="sub-navlist-item">Single post</Link>
-                    </li>
-                    <li className="sub-list-item">
-                      <Link className="sub-navlist-item">Error 404</Link>
-                    </li>
-                  </ul>
-                </span>
               </li>
             </ul>
           </nav>

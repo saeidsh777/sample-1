@@ -12,6 +12,10 @@ export default function Job() {
     <section className='job'>
         <div className="container">
             <div className="row">
+                <div className="col-12 my-5">
+                    <h1 className='fw-bold text-center'>Job List</h1>
+                </div>
+                <hr className='mb-5'/>
                 {jobData.map(jobItem => (
             
                     <div key={jobItem.jobID} className="col-12 col-lg-4 mb-4">
