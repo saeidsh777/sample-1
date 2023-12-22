@@ -5,7 +5,7 @@ export default function FeaturedCompany() {
   return (
     <section className="featured-company d-flex align-items-center white-50-b">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center overflow-x-hidden">
           <div className="col-12 col-lg-6 order-1 order-lg-0 mt-5 mt-lg-0">
             <div className="row">
               <div className="col-6 col-md-4 gx-1">
@@ -57,7 +57,7 @@ export default function FeaturedCompany() {
           </div>
 
           <div
-            className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1 ps-lg-5"
+            className="col-12 col-lg-6 mt-5 mt-lg-0 order-0 order-lg-1 ps-lg-5 overflow-x-hidden"
             data-aos="fade-left"
             data-aos-offset="200"
             data-aos-duration="1000"

@@ -29,7 +29,7 @@ export default function Home() {
           <div className="container">
             <div className="row align-items-center">
               <div
-                className="col-12 col-lg-6 d-flex flex-column gap-3 order-last order-lg-first mt-5 mt-lg-0"
+                className="col-12 col-lg-6 d-flex flex-column gap-3 order-last order-lg-first mt-5 mt-lg-0 overflow-x-hidden"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
@@ -117,7 +117,7 @@ export default function Home() {
             <div className="row">
               <div
                 className="col-12 col-lg-4 position-relative"
-                data-aos="fade-right"
+                data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
@@ -152,7 +152,7 @@ export default function Home() {
 
               <div
                 className="mt-3 mt-lg-0 col-12 col-lg-4 position-relative"
-                data-aos="fade-left"
+                data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
@@ -182,8 +182,8 @@ export default function Home() {
               </div>
 
               <div
-                className="col-12 col-lg-6 mt-5 mt-lg-0 ps-5"
-                data-aos="fade-left"
+                className="col-12 col-lg-6 mt-5 mt-lg-0 ps-1 ps-lg-5 overflow-x-hidden"
+                data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
@@ -209,8 +209,8 @@ export default function Home() {
             <LastJob />
           </div>
         </section>
-        
-        <FeaturedCompany/>
+
+        <FeaturedCompany />
 
         <section className="community position-relative">
           <div className="community-bg">
@@ -288,31 +288,31 @@ export default function Home() {
                 className="mySwiper pb-5"
               >
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <CommentBox/>
+                  <CommentBox />
                 </SwiperSlide>
               </Swiper>
             </div>
